@@ -1,19 +1,18 @@
-@extends('layouts.app')
-
-@section('content')
-
-    <h1>メッセージ新規作成ページ</h1>
-
-
-    {!! Form::model($tasklist, ['route' => 'tasklists.store']) !!}
-        {!! Form::label('status', 'ステータス:') !!}
-        {!! Form::text('status') !!}
-
-        {!! Form::label('content', 'メッセージ:') !!}
-        {!! Form::text('content') !!}
-
-        {!! Form::submit('投稿') !!}
-
-    {!! Form::close() !!}
-
-@endsection
+        {!! Form::model($tasklist, ['route' => 'tasklists.store']) !!}
+            
+            <div class="col-xs-12 col-sm-offset-8 col-md-offset-8 col-md-offset-8" >
+            
+                <div class="form-group">
+                    {!! Form::label('status', 'ステータス:') !!}
+                    {!! Form::text('status', null, ['class' => 'form-control']) !!}
+                </div>
+                    
+                <div class="form-group">
+                    {!! Form::label('content', 'メッセージ:') !!}
+                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
+                </div>
+                
+                {!! Form::submit('投稿', ['class' => 'btn btn-primary']) !!}
+        
+            {!! Form::close() !!}
+            
