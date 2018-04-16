@@ -21,7 +21,8 @@ class TasklistsController extends Controller
         $tasklists = Tasklist::all();
 
         return view('tasklists.index', [
-            'tasklists' => $tasklists,
+            'tasklists' => $tasklists
+            
      ]);
     }
 
