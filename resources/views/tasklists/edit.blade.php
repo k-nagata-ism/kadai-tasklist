@@ -2,8 +2,8 @@
         <div class="col-xs-6">
             {!! Form::model($tasklist, ['route' => ['tasklists.update', $tasklist->id], 'method' => 'put']) !!}
                 <div class="form-group">
-                    {!! Form::label('ststus', 'ステータス:') !!}
-                    {!! Form::text('ststus', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('status', 'ステータス:') !!}
+                    {!! Form::text('status', null, ['class' => 'form-control']) !!}
                 </div>
         
                 <div class="form-group">
