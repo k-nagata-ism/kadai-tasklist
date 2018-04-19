@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+ 
     <div class="row">
         <div class="col-xs-6">
             {!! Form::model($tasklist, ['route' => ['tasklists.update', $tasklist->id], 'method' => 'put']) !!}
@@ -16,3 +20,5 @@
             {!! Form::close() !!}
         </div>
     </div>
+    @endsection  
+    

@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
 
    <table class="table table-bordered">
         <tr>
@@ -19,3 +21,4 @@
         {!! Form::model($tasklist, ['route' => ['tasklists.destroy', $tasklist->id], 'method' => 'delete']) !!}
         {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
+        @endsection  
