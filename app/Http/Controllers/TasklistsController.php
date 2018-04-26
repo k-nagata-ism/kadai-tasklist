@@ -53,13 +53,20 @@ class TasklistsController extends Controller
             'content' => 'required|max:255',
         ]);
         
-        $tasklist = new Tasklist;
-        $tasklist->status = $request->status;
-        $tasklist->content = $request->content;
-        $tasklist->save();
+    //    $tasklist = new Tasklist;
+    //    $tasklist->status = $request->status;
+    //    $tasklist->content = $request->content;
+    //    $tasklist->save();
+
+        $request->user()->tasklists()->create([
+            'content' => $request->content,
+            'status' => $request->status,
+        ]);
+    
 
         return redirect('/');
     }
+    
 
     /**
      * Display the specified resource.
@@ -109,7 +116,8 @@ class TasklistsController extends Controller
         $tasklist->status = $request->status;
         $tasklist->content = $request->content;
         $tasklist->save();
-
+        
+    
         return redirect('/');
     }
 
@@ -127,3 +135,6 @@ class TasklistsController extends Controller
         return redirect('/');
     }
 }
+
+
+
